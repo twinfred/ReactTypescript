@@ -3,15 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Message from './Message';
 
-const initialState = {
-  name: 'Tim',
-  message: 'is learning TypeScript!'
-};
+class App extends Component<any> {
 
-type State = Readonly<typeof initialState>;
-
-class App extends Component<any, State> {
-  readonly state: State = initialState;
 
   constructor(props: object) {
     super(props);
@@ -27,7 +20,7 @@ class App extends Component<any, State> {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Message name={this.state.name} message={this.state.message} />
+          <Message />
         </header>
       </div>
     );

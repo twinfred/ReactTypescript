@@ -1,12 +1,7 @@
-interface IUserMessage {
-    name: string;
-    message: string;
-}
+import messageHoc from './Hoc';
 
-const Message = (props: IUserMessage): any => {
-    return (
-        <p>{ props.name } { props.message }</p>
-    )
-}
+const example = ( props: any ): any => <p>{ props.name } { props.message }</p>
+
+const Message = messageHoc(example);
 
 export default Message;
